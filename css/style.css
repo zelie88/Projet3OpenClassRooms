@@ -1,0 +1,222 @@
+	/* Mise en forme de la page*/
+		.container-fluid {
+			margin-left: 15px;
+			margin-right: 15px;
+		}
+
+		.row {
+			margin-right: -15px;
+			margin-left: -15px;
+		}
+
+	/*Section diaporama*/
+		#diaporama {
+			height: 600px;
+			position: relative;
+			background-color: #7ED956;
+			justify-content: center;
+			object-fit: cover;
+		}
+
+		#diaporama img {
+			width: 100%;
+		}
+
+		.slideElement {
+			opacity: 0;
+			transition: opacity 1s;
+			position: absolute;
+		}
+
+		/* Boutons du diaporama */
+		.prev,
+		.next,
+		.pause {
+			cursor: pointer;
+			position: absolute;
+			margin-top: 15%;
+			width: auto;
+			padding: 16px;
+			color: #FFF;
+			background: none;
+			font-weight: bold;
+			font-size: 18px;
+			transition: 0.6s ease;
+			border: none;
+			border-radius: 0 25px 25px 0;
+			z-index: 1;
+		}
+
+		.prev {
+			left: 0;
+		}
+
+		.next {
+			right: 0;
+			border-radius: 25px 0 0 25px;
+		}
+
+		.pause {
+			left: 47%;
+			bottom: 20px;
+			font-weight: normal;
+			border-radius: 25%;
+		}
+
+		.prev:hover,
+		.next:hover,
+		.pause:hover {
+			background-color: rgba(0, 0, 0, 0.3);
+		}
+
+	/*Section map et infos stations*/
+		#infoMap {
+			padding: 50px;
+		}
+
+		#map {
+			height: 600px;
+			border: solid 5px #7ED956;
+			margin-right: 50px;
+		}
+
+		#boiteInfos {
+			border: solid 5px #7ED956;
+			border-radius: 30px;
+			margin: auto;
+			padding: 20px;
+		}
+
+		/*Formulaire*/
+		#boiteInfos h2 {
+			margin-bottom: 30px;
+		}
+
+		#formName {
+			display: none;
+		}
+
+		#Nom,
+		#Prenom {
+			padding-right: 0;
+			white-space: nowrap;
+		}
+
+		#name,
+		#vorname {
+			margin-left: 15px;
+		}
+
+		/*Modal et signature*/
+		#exampleModalCenterTitle {
+			margin: auto;
+		}
+
+		#close {
+			margin-left: 0;
+		}
+
+		.modal-body {
+			margin: auto;
+		}
+
+		.canvas {
+			border: solid 5px #7ED956;
+		}
+
+	/*Réservation en cours et expiration*/
+		#timer {
+			display: none;
+		}
+
+		#textTimer {
+			text-align: center;
+		}
+
+		#annulerReserver {
+			margin-top: 10px;
+		}
+
+		#expired {
+			text-align: center;
+			display: none;
+		}
+
+	/*Medias Querries*/
+		/*Ecran moyen*/
+		@media all and (max-width: 1024px) {
+
+			.prev,
+			.next {
+				margin-top: 25%;
+			}
+
+			#infoMap {
+				padding: 20px;
+			}
+
+			#map {
+				margin-right: 0;
+			}
+
+			#name,
+			#vorname {
+				margin: auto;
+			}
+		}
+
+		/*Format tablette*/
+		@media all and (max-width: 992px) {
+			#diaporama {
+				height: 550px;
+			}
+
+			#map {
+				height: 400px;
+			}
+
+			#boiteInfos {
+				margin-top: 20px;
+			}
+		}
+
+		/*Formats smartphones*/
+		@media all and (max-width: 768px) {
+			#diaporama {
+				height: 450px;
+			}
+
+			#infoMap {
+				padding: 0;
+			}
+
+			#map {
+				margin-top: 20px;
+			}
+
+			#boiteInfos {
+				margin-bottom: 20px;
+			}
+		}
+
+		@media all and (max-width: 667px) {
+			#diaporama {
+				height: 390px;
+			}
+		}
+
+		@media all and (max-width: 450px) {
+			#diaporama {
+				height: 240px;
+			}
+
+			.pause {
+				bottom: 0;
+			}
+
+			.prev:hover,
+			.next:hover,
+			.pause:hover {
+				background: none;
+			}
+		}
